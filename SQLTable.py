@@ -12,11 +12,13 @@ class Note(db.Model):
 
 
 def init_db():
-    db.create_all()
+    with app.app_context():
+        db.create_all()
 
 
 uesrs = {
 
-    'admin': ['admin', 'look', 'delete', 'add']
+    'admin': ['admin', 'look', 'delete', 'add', 'say'],
+    'uesr': ['see', 'say']
 
 }
